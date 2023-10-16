@@ -6,14 +6,14 @@ import com.example.pract5.entity.template.AbstractProductEntity;
 import com.example.pract5.entity.template.Type;
 import com.example.pract5.form.BookForm;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "books")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class BookEntity extends AbstractProductEntity<BookForm> {
 
     private String author;
@@ -23,14 +23,7 @@ public class BookEntity extends AbstractProductEntity<BookForm> {
     @Setter(AccessLevel.NONE)
     private final Type type = Type.Books;
 
-    public BookEntity() {
-    }
 
-
-    public BookEntity(Long id_seller, Integer price, String title, String author) {
-        super(id_seller, price, title);
-        this.author = author;
-    }
 
     @Override
     public void update(BookForm form) {

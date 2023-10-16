@@ -6,14 +6,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Table;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "telephones")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class TelephoneEntity extends AbstractProductEntity<TelephoneForm> {
 
     private String manufacturer;

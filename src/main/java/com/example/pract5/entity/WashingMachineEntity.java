@@ -7,15 +7,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Table;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 
 @Entity
 @Table(name = "washing_machines")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class WashingMachineEntity extends AbstractProductEntity<WashingMachineForm> {
 
     private String manufacturer;

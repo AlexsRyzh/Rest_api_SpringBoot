@@ -1,5 +1,6 @@
 package com.example.pract5.form;
 
+import com.example.pract5.entity.template.Type;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -12,7 +13,6 @@ import lombok.Setter;
 @Setter
 public class ClientForm {
 
-    @NotNull(message = "Поле name не может быть пустым")
     private String name;
 
     @NotNull(message = "Поле email не может быть пустым")

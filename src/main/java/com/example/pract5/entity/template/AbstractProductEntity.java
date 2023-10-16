@@ -20,11 +20,13 @@ public abstract class AbstractProductEntity<F extends AbstractProductForm> exten
 
     protected String title;
 
+    private Integer amount = 0;
 
     @Override
     public void update(F form) {
         this.id_seller = form.getId_seller();
         this.price = form.getPrice();
         this.title = form.getTitle();
+        this.amount = form.getAmount();
     }
 }
